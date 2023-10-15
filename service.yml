@@ -7,8 +7,7 @@ metadata:
 spec:
  type: NodePort
  ports:
-  - targetPort: 8080
-    port: 8080
-    nodePort: 30030
- selector:
-   app: my-app1
+    - port: 8080
+      targetPort: 8080
+
+  type: LoadBalancer
