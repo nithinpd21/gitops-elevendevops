@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
- name: my-elevendevops-service
+ name: project1-elevendevops-service
  labels:
-   app: my-app
+   app: my-app1
 spec:
  type: NodePort
  ports:
@@ -11,4 +11,4 @@ spec:
     port: 8080
     nodePort: 30030
  selector:
-   app: my-app
+   app: my-app1
