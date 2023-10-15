@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project1-elevendevops-deployment
+  labels:
+    app: my-app1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app1
+  template:
+    metadata:
+      labels:
+        app: my-app1
+    spec:
+      imagePullSecrets:
+      - name: my-registry-key
+      containers:
+      - name: npd-projet-container
+        image: nithinpd/elevendevops:tagname
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
